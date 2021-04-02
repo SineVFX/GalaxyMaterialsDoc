@@ -1,37 +1,39 @@
-## Welcome to GitHub Pages
+---
+layout: default
+title: Quick Start
+nav_order: 1
+---
 
-You can use the [editor on GitHub](https://github.com/SineVFX/GalaxyMaterialsDoc/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+## Quick Start
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+First of all, you need to unpack the right packages for your specific setup of Unity. This Asset contains three packages, for **Standard**, **HDRP**, and **URP** pipelines. Start with **Step_1_CoreResources** package, it will add all core resources (textures, scripts, and animations) needed for this Asset. After that, pick the right SRP package and unpack it too. It will add all other components like prefabs of complete effects, scenes, materials, and shaders. If you using Standard pipeline and already have PostProcessing Stack V2 in your project, you can uncheck it when unpacking the **Standard** package.
 
-### Markdown
+### Important Notes
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+* **(URP)** Make sure, you enable HDR, Depth, and Opaque textures in URP Asset settings.
 
-```markdown
-Syntax highlighted code block
+![s19](/assets/images/Screenshot_19.png)
 
-# Header 1
-## Header 2
-### Header 3
+* **(Standard)** Turn on "HDR" on your Camera, Shaders requires it.
 
-- Bulleted
-- List
+![s18](/assets/images/Screenshot_18.png)
 
-1. Numbered
-2. List
+* **(All)** This VFX Asset looks much better in "Linear" Color Space, but if you using "Gamma" Color Space, you need to slightly decrease the Final Power (Emission Power) material parameter of each effect. You can check it in the "Edit > Project Settings > Player" TAB.
+* **(All)** Image Effects are necessary in order to make a great-looking game, as well as our asset. Be sure to use "ACES Tone Mapping" and "Bloom".
+* **(All)** Your camera must render Depth texture in order for some effects to appear correctly.
 
-**Bold** and _Italic_ and `Code` text
 
-[Link](url) and ![Image](src)
-```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+### How To Use
 
-### Jekyll Themes
+* First of all, check two scenes "DemoScene_MainEffects", and "DemoScene_SeparateEffects" in the Scenes folder. The First one contains complete effects, you can spawn it with right-click. The second one contains additional effects, some environment design meshes, and example particle systems.
+* Drag and Drop prefabs from the "CompleteEffects" folder into your scene and they will automatically play on awake. You can just instantiate these prefabs in your scripts, or create an object pool system, enabling and disabling an array of effects.
+* Most of the effects are driven by Particle Systems utilizing ([Custom Vertex Streams](https://docs.unity3d.com/Manual/PartSysVertexStreams.html)). You can freely scale the whole effect, it will preserve the proportions. Only one single parameter needed to be adjusted, it is "Soft Particles Distance" in materials with a "DissolveParticleAdvances" shader.
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/SineVFX/GalaxyMaterialsDoc/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+![s20](/assets/images/Screenshot_20.png)
 
-### Support or Contact
+* Some prefabs are driven by a standard animation system in Unity, you can freely customize these animations.
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+
+
+### Support email: sinevfx@gmail.com
