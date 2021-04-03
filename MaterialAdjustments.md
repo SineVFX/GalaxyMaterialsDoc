@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Scaling And Adjusting
+title: Material Adjustments
 nav_order: 2
 ---
 
