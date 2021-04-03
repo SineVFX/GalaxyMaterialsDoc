@@ -12,7 +12,7 @@ First of all, you need to unpack the right packages for your specific setup of U
 
 * **(URP)** Make sure, you enable HDR in URP Asset settings.
 
-![s19](/assets/images/Screenshot_19.png)
+![s35](/assets/images/Screenshot_35.png)
 
 * **(Standard)** Turn on "HDR" on your Camera, Shaders requires it.
 
