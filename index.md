@@ -6,7 +6,7 @@ nav_order: 1
 
 ## Quick Start
 
-First of all, you need to unpack the right packages for your specific setup of Unity. This Asset contains three packages, for **Standard**, **HDRP**, and **URP** pipelines. Start with **Step_1_CoreResources** package, it will add all core resources (textures, scripts, and meshes) needed for this Asset. After that, pick the right SRP package and unpack it too. It will add all other components like prefabs of complete effects, scenes, materials, and shaders. If you using Standard pipeline and already have PostProcessing Stack V2 in your project, you can uncheck it when unpacking the **Standard** package.
+First of all, you need to unpack the right packages for your specific setup of Unity. This Asset contains three packages, for **Standard**, **HDRP**, and **URP** pipelines. Start with **Step_1_CoreResources** package, it will add all core resources (textures, scripts, and meshes) needed for this Asset. After that, pick the right SRP package and unpack it too. It will add all other components like prefabs of complete effects, scenes, materials, and shaders. If you using Standard pipeline and already have PostProcessing Stack V2 in your project, you can uncheck it when unpacking the **Standard** package. WWWw
 
 ### Important Notes
 
